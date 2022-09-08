@@ -2,7 +2,7 @@ pipeline {
     agent {label 'test_agent'}
     
     stages {
-	    stage("GitCheckout")
+	    stage("GitCheckout") {
 	    	steps {
 			git branch: 'main', credentialsId: '95ae0d33-6c92-4b9e-b08e-bc3d0cccc12b', url: 'https://github.com/devsecops09/demo.git'
 		}
