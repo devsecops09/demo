@@ -4,7 +4,7 @@ pipeline {
     stages {
 	    stage("GitCheckout") {
 	    	steps {
-			git branch: 'main', credentialsId: '95ae0d33-6c92-4b9e-b08e-bc3d0cccc12b', url: 'https://github.com/devsecops09/demo.git'
+			git branch: '${env:GIT_BRANCH}', credentialsId: '95ae0d33-6c92-4b9e-b08e-bc3d0cccc12b', url: 'https://github.com/devsecops09/demo.git'
 		}
     }
 	    stage("Licensing") {
